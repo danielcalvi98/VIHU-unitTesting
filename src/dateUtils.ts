@@ -5,7 +5,7 @@ export function getCurrentYear(): number {
   return moment().year();
 }
 
-export function add(date: Date, number: number, type = DATE_UNIT_TYPES.DAYS): Date {
+export function add(date: Date, number: number, type: moment.unitOfTime.DurationConstructor = DATE_UNIT_TYPES.DAYS): Date {
   return moment(date).add(number, type).toDate();
 }
 
