@@ -9,10 +9,17 @@ describe("Date Utils", () => {
     })
   })
 
-  describe("add", () => {
-    it('should add to the date correctly', () => {
+  describe("add day", () => {
+    it('should add days to the date correctly', () => {
       const result = add(new Date('2019-06-11'), 2);
       expect(result).toStrictEqual(new Date('2019-06-13'));
+    })  
+  })
+
+  describe("add month", () => {
+    it('should add months to the date correctly', () => {
+      const result = add(new Date('2019-06-11'), 2, DATE_UNIT_TYPES.MONTHS);
+      expect(result).toStrictEqual(new Date('2019-08-11'));
     })  
   })
   
