@@ -48,6 +48,4 @@ jobs:
 
       - name: codecov
         run: |
-          $ProgressPreference = 'SilentlyContinue'
-          Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe -Outfile codecov.exe
-          .\codecov.exe 
+          curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov 
