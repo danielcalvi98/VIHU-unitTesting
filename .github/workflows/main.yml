@@ -46,3 +46,8 @@ jobs:
       - name: Coverage
         run: npm test -- --coverage
 
+      - name: codecov
+        run: |
+          $ProgressPreference = 'SilentlyContinue'
+          Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe -Outfile codecov.exe
+          .\codecov.exe 
